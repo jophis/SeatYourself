@@ -1,0 +1,24 @@
+<h1>Restaurants#show</h1>
+<%= link_to "Back to Restaurants", restaurants_url %> 
+<h2><%= @restaurant.name %> </h2>
+<p> <%= @restaurant.address%><br>
+<p> <img src = "<%= @restaurant.picture %>"><br>
+<p> <%= @restaurant.phone_number %><br>
+<p> <%= @restaurant.description %></p>
+<p> <%= @restaurant.category %></p><br>
+
+<p> Make a Reservation </p><br>
+
+
+the goal here is to set @reservation.reservation_time via the 
+select (dropdown) form element.
+
+<%= form_for [@restaurant, @reservation] do |f| %>
+	<%= f.select :reservation_time, @time_slots %><br/>
+	<%= f.label :party_size %><br />
+    <%= f.number_field :party_size %>
+	<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

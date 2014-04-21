@@ -14,9 +14,8 @@
 ActiveRecord::Schema.define(version: 20140421003224) do
 
   create_table "reservations", force: true do |t|
-    t.integer  "user_id"
     t.integer  "restaurant_id"
-    t.string   "date"
+    t.datetime "reservation_time"
     t.integer  "party_size"
     t.datetime "created_at"
     t.datetime "updated_at"
