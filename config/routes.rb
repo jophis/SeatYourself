@@ -1,4 +1,7 @@
 SeatYourself::Application.routes.draw do
+  get "reservations/new"
+  get "reservations/create"
+  get "reservations/destroy"
   resources :restaurants
   resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
